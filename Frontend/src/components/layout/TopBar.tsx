@@ -1,4 +1,5 @@
 import { Icon } from '../ui/Icon'
+import { GitHubLink } from './GitHubLink'
 import { ThemeToggle } from './ThemeToggle'
 
 interface TopBarProps {
@@ -22,6 +23,7 @@ export function TopBar({ userName, onMenuClick }: TopBarProps) {
       </div>
 
       <div className="flex items-center gap-2 md:gap-4">
+        <GitHubLink />
         <ThemeToggle />
         <div className="hidden sm:block h-8 w-px bg-outline-variant" aria-hidden="true" />
         <div

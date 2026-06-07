@@ -10,6 +10,7 @@ import {
   EyeOffIcon,
   FolderIcon,
   FolderOpenIcon,
+  GithubIcon,
   KeyRoundIcon,
   LayoutGridIcon,
   LayoutListIcon,
@@ -71,6 +72,7 @@ export type IconName =
   | 'error'
   | 'progress_activity'
   | 'mail'
+  | 'github'
 
 export const iconMap: Record<IconName, ComponentType<AnimatedIconProps>> = {
   folder_shared: FolderOpenIcon,
@@ -105,6 +107,7 @@ export const iconMap: Record<IconName, ComponentType<AnimatedIconProps>> = {
   error: TriangleAlertIcon,
   progress_activity: LoaderCircleIcon,
   mail: MailIcon,
+  github: GithubIcon,
 }
 
 const textSizeMap: Record<string, number> = {

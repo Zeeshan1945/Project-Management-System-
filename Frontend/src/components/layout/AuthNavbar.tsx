@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Icon } from '../ui/Icon'
+import { GitHubLink } from './GitHubLink'
 import { ThemeToggle } from './ThemeToggle'
 
 export function AuthNavbar() {
@@ -15,7 +16,10 @@ export function AuthNavbar() {
         </div>
       </Link>
 
-      <ThemeToggle />
+      <div className="flex items-center gap-2">
+        <GitHubLink />
+        <ThemeToggle />
+      </div>
     </header>
   )
 }
