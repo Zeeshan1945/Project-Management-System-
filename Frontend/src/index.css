@@ -1,0 +1,336 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "HMB";
+  src: url(./assets/fonts/hmb10.woff2) format("woff2");
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HMB";
+  src: url(./assets/fonts/hmb2.woff2) format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HMB";
+  src: url(./assets/fonts/hmb3.woff2) format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HMB";
+  src: url(./assets/fonts/hmb.woff2) format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HMB";
+  src: url(./assets/fonts/hmb5.woff2) format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HMB";
+  src: url(./assets/fonts/hmb6.woff2) format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HMB";
+  src: url(./assets/fonts/hmb7.woff2) format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HMB";
+  src: url(./assets/fonts/hmb8.woff2) format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HMB";
+  src: url(./assets/fonts/hmb9.woff2) format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HMB";
+  src: url(./assets/fonts/hmb11.woff2) format("woff2");
+  font-weight: 950;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HMB";
+  src: url(./assets/fonts/hmb12.woff2) format("woff2");
+  font-weight: 1000;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "HMB", sans-serif;
+
+  --color-surface: #f8f9fa;
+  --color-background: #f8f9fa;
+  --color-primary: #1a146b;
+  --color-secondary: #4648d4;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-on-background: #191c1d;
+  --color-on-surface: #191c1d;
+  --color-on-surface-variant: #474651;
+  --color-outline: #777682;
+  --color-outline-variant: #c8c5d3;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f4f5;
+  --color-surface-container: #edeeef;
+  --color-surface-container-high: #e7e8e9;
+  --color-surface-variant: #e1e3e4;
+  --color-primary-fixed: #e2dfff;
+  --color-primary-fixed-dim: #c3c0ff;
+  --color-on-primary-fixed: #1a146b;
+  --color-secondary-fixed: #e1e0ff;
+  --color-on-secondary-fixed: #1a146b;
+  --color-tertiary-fixed: #ffdbc7;
+  --color-on-tertiary-container: #de915f;
+
+  --color-chart-grid: #e1e3e4;
+  --color-chart-axis: #474651;
+  --color-chart-tooltip-bg: #ffffff;
+  --color-chart-tooltip-text: #191c1d;
+  --color-chart-tooltip-border: #c8c5d3;
+  --color-chart-pending: #de915e;
+  --color-chart-in-progress: #4648d4;
+  --color-chart-completed: #1a146b;
+  --color-chart-bar: #4648d4;
+  --color-chart-1: #4648d4;
+  --color-chart-2: #1a146b;
+  --color-chart-3: #c3c0ff;
+  --color-chart-4: #de915e;
+
+  --spacing-margin-mobile: 1rem;
+  --spacing-margin-desktop: 2rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-stack-sm: 0.5rem;
+  --spacing-stack-md: 1rem;
+  --spacing-stack-lg: 2rem;
+  --spacing-container-max: 1280px;
+
+  --text-display: 36px;
+  --text-display--line-height: 44px;
+  --text-headline-lg: 24px;
+  --text-headline-lg--line-height: 32px;
+  --text-title-md: 18px;
+  --text-title-md--line-height: 26px;
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 24px;
+  --text-body-md: 14px;
+  --text-body-md--line-height: 20px;
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-metadata: 12px;
+  --text-metadata--line-height: 16px;
+}
+
+.dark {
+  --color-surface: #121218;
+  --color-background: #121218;
+  --color-primary: #c3c0ff;
+  --color-secondary: #8b8dff;
+  --color-on-primary: #1a146b;
+  --color-on-secondary: #ffffff;
+  --color-on-background: #e4e1e9;
+  --color-on-surface: #e4e1e9;
+  --color-on-surface-variant: #c8c5d3;
+  --color-outline: #918f9a;
+  --color-outline-variant: #474651;
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+  --color-surface-container-lowest: #0e0e14;
+  --color-surface-container-low: #1a1a22;
+  --color-surface-container: #1e1e28;
+  --color-surface-container-high: #282832;
+  --color-surface-variant: #474651;
+  --color-primary-fixed: #e2dfff;
+  --color-primary-fixed-dim: #c3c0ff;
+  --color-on-primary-fixed: #1a146b;
+  --color-secondary-fixed: #e1e0ff;
+  --color-on-secondary-fixed: #1a146b;
+  --color-tertiary-fixed: #ffdbc7;
+  --color-on-tertiary-container: #8b4513;
+
+  --color-chart-grid: #474651;
+  --color-chart-axis: #c8c5d3;
+  --color-chart-tooltip-bg: #1e1e28;
+  --color-chart-tooltip-text: #e4e1e9;
+  --color-chart-tooltip-border: #474651;
+  --color-chart-pending: #ffb380;
+  --color-chart-in-progress: #8b8dff;
+  --color-chart-completed: #c3c0ff;
+  --color-chart-bar: #8b8dff;
+  --color-chart-1: #8b8dff;
+  --color-chart-2: #c3c0ff;
+  --color-chart-3: #e2dfff;
+  --color-chart-4: #ffb380;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  select option {
+    background-color: var(--color-surface-container-lowest);
+    color: var(--color-on-surface);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+@layer utilities {
+  .stitch-border {
+    border: 1px solid var(--color-outline-variant);
+  }
+
+  .input-focus-ring:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-secondary) 20%, transparent);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out both;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.35s ease-out both;
+  }
+
+  .animate-in {
+    animation: scale-in 0.25s ease-out both;
+  }
+
+  .page-enter {
+    animation: fade-in 0.3s ease-out both;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.swal2-popup.swal-themed-popup {
+  border: 1px solid var(--color-outline-variant);
+  border-radius: 12px;
+  font-family: var(--font-sans);
+}
+
+.swal2-title.swal-themed-title {
+  font-size: var(--text-title-md);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.swal2-html-container.swal-themed-text {
+  font-size: var(--text-body-md);
+  color: var(--color-on-surface-variant);
+}
+
+.swal2-styled.swal-themed-btn {
+  border-radius: 8px !important;
+  font-size: var(--text-label-md) !important;
+  font-weight: 600 !important;
+  padding: 10px 20px !important;
+}
+
+@media (max-width: 640px) {
+  .swal2-popup.swal-themed-popup {
+    width: calc(100% - 2rem) !important;
+    max-width: calc(100vw - 2rem) !important;
+    margin: 0 1rem !important;
+  }
+
+  .swal2-actions {
+    flex-direction: column-reverse !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+  }
+
+  .swal2-styled.swal-themed-btn {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

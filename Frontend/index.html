@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />  
+    <meta name="description" content="Project Management System by Zeeshan Nawaz">
+    <meta name="keywords" content="project management, task management, kanban, agile, team collaboration">
+    <meta name="author" content="Zeeshan Nawaz">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="yandexbot" content="index, follow">
+    <meta name="sitemap" content="https://www.example.com/sitemap.xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test React</title>
+    <script>
+      (function () {
+        var stored = localStorage.getItem('app-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
